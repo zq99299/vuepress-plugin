@@ -5,9 +5,9 @@
 ## Install
 
 ```bash
-yarn add -D vuepress-plugin-baidu-tongji-analytics
+yarn add vuepress-plugin-baidu-tongji-analytics
 # OR 
-npm install -D vuepress-plugin-baidu-tongji-analytics
+npm install vuepress-plugin-baidu-tongji-analytics
 ```
 
 > open npm : https://www.npmjs.com/package/vuepress-plugin-baidu-tongji-analytics
