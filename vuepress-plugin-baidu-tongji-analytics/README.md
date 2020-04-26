@@ -1,5 +1,7 @@
 # vuepress-plugin-baidu-tongji-analytics
 
+[![GitHub issues](https://img.shields.io/github/issues/zq99299/vuepress-plugin.svg)](https://github.com/zq99299/vuepress-plugin/issues) [![GitHub issues](https://img.shields.io/github/issues-closed/zq99299/vuepress-plugin.svg)](https://github.com/zq99299/vuepress-plugin/issues?q=is%3Aissue+is%3Aclosed) [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://raw.githubusercontent.com/zq99299/vuepress-plugin/master/LICENSE) [![npm](https://img.shields.io/npm/v/vuepress-plugin-baidu-tongji-analytics.svg)](https://www.npmjs.com/package/vuepress-plugin-baidu-tongji-analytics) [![npm](https://img.shields.io/npm/dt/vuepress-plugin-baidu-tongji-analytics.svg)](https://www.npmjs.com/package/vuepress-plugin-baidu-tongji-analytics)
+
 适用于 [vuepress](https://vuepress.vuejs.org/zh/plugin/using-a-plugin.html) 的百度统计分析插件
 
 ## Install
