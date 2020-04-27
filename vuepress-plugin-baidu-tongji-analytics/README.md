@@ -31,7 +31,7 @@ module.exports = {
     - Type: string
     - Default: undefined
     
-    ![image-baidukey](./docs/assets/image-baidukey.png)
+    ![image-baidukey](https://github.com/zq99299/vuepress-plugin/blob/master/vuepress-plugin-baidu-tongji-analytics/docs/assets/image-baidukey.png?raw=true)
 
 - open: 是否打开统计功能
     - Type: boolean
