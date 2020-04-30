@@ -1,6 +1,4 @@
 const vuepressPluginBaiduTongjiAnalyticsSC = require('../vuepress-plugin-baidu-tongji-analytics')
-const path = require('path')
-const vpt = require('../../vuepress-plugin-toolbar')
 
 module.exports = {
   title: 'vuepress-plugin for mrcode',
@@ -48,14 +46,7 @@ module.exports = {
     }
   },
   plugins: [
-    // [
-    //   (pluginOptions, context) => ({
-    //     name: 'my-xxx-plugin',
-    //     clientRootMixin: path.resolve(__dirname, '../../vuepress-plugin-page-nav2/clientRootMixin.js'),
-    //     enhanceAppFiles: path.resolve(__dirname, '../../vuepress-plugin-page-nav2/enhanceAppFile.js'),
-    //   })
-    // ],
-    [vpt, {
+    [require('../../vuepress-plugin-toolbar'), {
       'pageNav': {
         icon: '',
         name: '导航'
