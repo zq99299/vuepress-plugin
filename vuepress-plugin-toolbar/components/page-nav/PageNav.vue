@@ -36,7 +36,7 @@
     created () {
       let config = DEFAULG_CONFIG
       if (this.config) {
-        config = Object.assign(DEFAULG_CONFIG, config)
+        config = Object.assign(DEFAULG_CONFIG, this.config)
       }
       this.icon = config.icon
       this.name = config.name

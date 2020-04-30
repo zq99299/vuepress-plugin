@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import ToolbarAsidebar from './ToolbarAsidebar'
 import PageNav from './components/page-nav/PageNav'
+import CustomOpt from './components/custom-opt/CustomOpt'
 
 export default {
   created () {
@@ -54,12 +55,15 @@ export default {
       if (!this._mrcodeToolbar.pageNav) {
         let pageAsidebar = this._mrcodeToolbar.pageAsidebar
         const PageNavObj = Vue.extend(PageNav)
-        const pageNavObjIns = new PageNavObj()
+        const pageNavObjIns = new PageNavObj({
+          propsData: {
+            config: config
+          }
+        })
         pageNavObjIns._parent = pageAsidebar.$el
         pageNavObjIns.$mount()
         pageNavObjIns.pageObject = this.$page
-        pageNavObjIns.config = config
-        pageAsidebar.$el.appendChild(pageNavObjIns.$el)
+        pageAsidebar.$el.insertBefore(pageNavObjIns.$el, pageAsidebar.$el.firstChild)
         this._mrcodeToolbar.pageNav = pageNavObjIns
       }
     },
