@@ -1,14 +1,11 @@
 <template>
-  <div class="option-box" v-bind:style="styleObject">
-    <i v-if="icon" :class="icon"></i>
-    <span v-if="name">{{name}}</span>
-    <div class="popover">
-      <page-nav-item :menus="headers"></page-nav-item>
-    </div>
-  </div>
+  <base-opt :config="configP" v-bind:style="styleObject">
+    <page-nav-item :menus="headers"></page-nav-item>
+  </base-opt>
 </template>
 
 <script>
+  import BaseOpt from '../base-opt/BaseOpt'
   import PageNavItem from './PageNavItem'
 
   const DEFAULG_CONFIG = {
@@ -16,7 +13,7 @@
     name: '导航',
   }
   export default {
-    components: { PageNavItem },
+    components: { BaseOpt, PageNavItem },
     props: {
       config: {},
       pageObject: {},
@@ -27,19 +24,23 @@
         styleObject: {
           display: undefined
         },
-        icon: undefined,
-        name: undefined,
-        isClose: false,  // 导航按钮是否显示
+        configP: null,
         headers: []
       }
     },
     created () {
       let config = DEFAULG_CONFIG
       if (this.config) {
-        config = Object.assign(DEFAULG_CONFIG, this.config)
+        config = Object.assign({}, DEFAULG_CONFIG, this.config)
+      } else {
+        config = Object.assign({}, DEFAULG_CONFIG, {
+          popover: {}
+        })
       }
-      this.icon = config.icon
-      this.name = config.name
+      if (!config.popover) {
+        config.popover = {}
+      }
+      this.configP = config
     },
     methods: {
       build () {
@@ -98,7 +99,6 @@
       },
       pageObject (val) {
         if ('/' == val.path) {
-          console.log('none')
           this.styleObject.display = 'none'
           return
         }
