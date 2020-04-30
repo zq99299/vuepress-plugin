@@ -1,33 +1,45 @@
 <template>
-  <div class="option-box">
-    <div @click="menuNavOpen = true">导航</div>
-    <div class="toc-container">
-      <div class="pos-box">
-        <div class="scroll-box" style="max-height:550px">
-          <menu-nav :menus="headers"></menu-nav>
-        </div>
-      </div>
+  <div class="option-box" v-bind:style="styleObject">
+    <i v-if="icon" :class="icon"></i>
+    <span v-if="name">{{name}}</span>
+    <div class="popover">
+      <page-nav-item :menus="headers"></page-nav-item>
     </div>
   </div>
 </template>
 
 <script>
-  import menuNav from './menuNav'
-  import PageAsidebar from './PageAsidebar'
+  import PageNavItem from './PageNavItem'
 
+  const DEFAULG_CONFIG = {
+    icon: 'iconfont icon-daohang',
+    name: '导航',
+  }
   export default {
-    name: 'menu.vue',
-    components: { menuNav },
+    components: { PageNavItem },
     props: {
+      config: {},
       pageObject: {},
-      pageKey: {}
+      pageKey: {},
     },
     data () {
       return {
-        msg: '默认信息',
-        headers: [],
-        menuNavOpen: false
+        styleObject: {
+          display: undefined
+        },
+        icon: undefined,
+        name: undefined,
+        isClose: false,  // 导航按钮是否显示
+        headers: []
       }
+    },
+    created () {
+      let config = DEFAULG_CONFIG
+      if (this.config) {
+        config = Object.assign(DEFAULG_CONFIG, config)
+      }
+      this.icon = config.icon
+      this.name = config.name
     },
     methods: {
       build () {
@@ -76,52 +88,31 @@
                 break
             }
           })
-          console.log(headers)
+          // console.log(headers)
           this.headers = headers
         }
       }
     },
     watch: {
       pageKey (val) {
-        if (val == this.rootPageKey) {
-          this.msg = '首页'
-          return
-        }
-        this.msg = val
-        console.log(val)
       },
       pageObject (val) {
+        if ('/' == val.path) {
+          console.log('none')
+          this.styleObject.display = 'none'
+          return
+        }
+        this.styleObject.display = undefined
         this.$nextTick(() => {
           this.build()
         })
-      },
-      menuNavOpen (val) {
-        this.$refs.menuNav.style.display = val ? '' : 'none'
       }
     }
   }
 </script>
 
-<style scoped>
-  .hidden-btn {
-    width: 50px;
-    z-index: 1;
-    position: fixed;
-    background: #eaecef;
-  }
-
-  .menu-nav {
-    position: fixed;
-    font-size: 16px;
-    background-color: #fff;
-    width: 20rem;
-    margin: 0;
-    top: 3.6rem;
-    right: 0;
-    bottom: 0;
-    box-sizing: border-box;
-    border-right: 1px solid #eaecef;
-    z-index: 600;
-    overflow-y: auto;
+<style lang="stylus" scoped>
+  .close {
+    display none !important
   }
 </style>
