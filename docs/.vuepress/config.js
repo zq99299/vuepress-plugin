@@ -86,6 +86,15 @@ module.exports = {
             title: '使用简单的 HTML 显示',
             html: '<h1>使用简单的 HTML</h1> 进行展示 <a href="http://www.baidu.com"> 链接到百度 </a>'
           }
+        }, {
+          icon: '',
+          name: '网络图片',
+          link: '',
+          popover: {
+            title: '使用 网络图片 来作为图片源',
+            type: 'image',
+            imageUrl: 'https://qq.yh31.com/tp/zjbq/202004222012224866.gif',
+          }
         }
       ]
     }],
