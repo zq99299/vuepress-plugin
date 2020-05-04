@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-toolbar",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "toolbar plugin for vuepress",
   "keywords": [
     "documentation",

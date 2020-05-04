@@ -1223,7 +1223,6 @@ alphanum-sort@^1.0.0:
 animate.css@^3.7.2:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-3.7.2.tgz#e73e0d50e92cb1cfef1597d9b38a9481020e08ea"
-  integrity sha512-0bE8zYo7C0KvgOYrSVfrzkbYk6IOTVPNqkiHg2cbyF4Pq/PXzilz4BRWA3hwEUBoMp5VBgrC29lQIZyhRWdBTw==
 
 ansi-align@^2.0.0:
   version "2.0.0"
@@ -7552,11 +7551,6 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   resolved "https://registry.yarnpkg.com/vuepress-plugin-smooth-scroll/-/vuepress-plugin-smooth-scroll-0.0.3.tgz#6eff2d4c186cca917cc9f7df2b0af7de7c8c6438"
   dependencies:
     smoothscroll-polyfill "^0.4.3"
-
-vuepress-plugin-toolbar@./vuepress-plugin-toolbar:
-  version "0.0.1"
-  dependencies:
-    animate.css "^3.7.2"
 
 vuepress-plugin-toolbar@./vuepress-plugin-toolbar/:
   version "0.0.1"

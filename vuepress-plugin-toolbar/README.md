@@ -20,23 +20,23 @@ npm install vuepress-plugin-toolbar
 
 ```javascript
 module.exports = {
-    "plugins": [
-         ["vuepress-plugin-toolbar",{
-                 "opts": [
-                     {
-                         "icon": "",
-                         "name": "文本展示",
-                         "popover": {
-                             "type": "text",
-                             "title": "纯文本说明",
-                             "text": "这是一个纯文本的内容展示，就是一段话"
-                         }
-                     }
-                 ]
-             }
-         ]
+  "plugins": [
+    ["vuepress-plugin-toolbar",{
+      "opts": [
+        {
+          "icon": "",
+          "name": "文本展示",
+          "popover": {
+            "type": "text",
+            "title": "纯文本说明",
+            "text": "这是一个纯文本的内容展示，就是一段话"
+          }
+        }
+      ]
+    }
     ]
+  ]
 }
 ```
 
-更多自定义配置，请参考这里
+更多自定义配置，[请参考这里](https://github.com/zq99299/vuepress-plugins/vuepress-plugin-toolbar/)
