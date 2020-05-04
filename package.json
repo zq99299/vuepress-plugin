@@ -13,7 +13,7 @@
   "dependencies": {
     "moment": "^2.24.0",
     "vuepress-plugin-code-copy": "^1.0.4",
-    "vuepress-plugin-page-nav": "./vuepress-plugin-page-nav2"
+    "vuepress-plugin-toolbar": "./vuepress-plugin-toolbar/"
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.4.1",

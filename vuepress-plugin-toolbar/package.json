@@ -25,6 +25,7 @@
     "access": "public"
   },
   "dependencies": {
+    "animate.css": "^3.7.2"
   },
   "devDependencies": {
     "vuepress": "^1.4.1"
