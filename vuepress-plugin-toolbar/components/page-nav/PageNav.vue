@@ -1,6 +1,14 @@
 <template>
-  <base-opt :config="configP" v-bind:style="styleObject">
-    <page-nav-item :menus="headers"></page-nav-item>
+  <base-opt :config="configP" v-bind:style="styleObject" class="me-toolbar-sidebar-page-nav">
+    <a v-if="pageTitleObj != null"
+       :href="pageTitleObj.path"
+       class="sidebar-link page-nav-title">
+      {{pageTitleObj.name}}
+    </a>
+    <hr>
+    <div class="page-nav-scorll">
+      <page-nav-item :menus="headers"></page-nav-item>
+    </div>
   </base-opt>
 </template>
 
@@ -25,7 +33,8 @@
           display: undefined
         },
         configP: null,
-        headers: []
+        headers: [],
+        pageTitleObj: null
       }
     },
     created () {
@@ -44,6 +53,15 @@
     },
     methods: {
       build () {
+        let tocs = this.buildTocs()
+        if (tocs.length == 1) {
+          this.pageTitleObj = tocs[0]
+          this.headers = tocs[0].childs
+        } else {
+          this.headers = tocs
+        }
+      },
+      buildTocs () {
         let headerLins = document.querySelectorAll('.page .content__default .header-anchor')
         if (headerLins && headerLins.length != 0) {
           let headers = []
@@ -90,7 +108,7 @@
             }
           })
           // console.log(headers)
-          this.headers = headers
+          return headers
         }
       }
     },

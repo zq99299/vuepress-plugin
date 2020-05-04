@@ -1,14 +1,13 @@
 .me-toolbar-sidebar {
-  font-size: 12px;
-  background-color: #fbfbfb;
-  width: 3.8rem;
   position: fixed;
-  margin: 0;
+  width: 3.8rem;
   top: 3.6rem;
   right: 0;
+  z-index: 1;
+  font-size: 12px;
+  background-color: #fbfbfb;
   //bottom: 0; // 会影响官网的 返回顶部 按钮组件的点击
   box-sizing: border-box;
-  z-index: 50;
   //border-left: 1px solid #eaecef;
   //overflow-y: auto;
   background: rgba(255, 255, 255, 0.1);
@@ -39,16 +38,17 @@
       display none;
       position: absolute;
       color: #2c3e50;
-      left: 100%;
+      //left: 100%;
+      //left: unset;
+      //right: 100%;
+      //margin-right: 2px;
+      //margin-left: 0;
+      right: 60px;
+      padding 5px;
       top: -1px;
       width: 240px;
       background: #fff;
       border: 1px solid #eee;
-      left: unset;
-      right: 100%;
-      margin-right: 2px;
-      margin-left: 0;
-      padding 5px
 
       .title {
         font-size: 1rem;
@@ -78,6 +78,22 @@
           background-color: #3eaf7c;
         }
       }
+    }
+  }
+
+  .me-toolbar-sidebar-page-nav {
+    .page-nav-title {
+      font-weight 400px
+      font-size 14px
+      text-align center
+    }
+
+    .page-nav-scorll {
+      overflow auto
+      max-height 600px
+    }
+    .page-nav-link{
+      list-style-type: none !important;
     }
   }
 
