@@ -43,6 +43,8 @@ module.exports = {
     
     想在你本地预览笔记的时候也生效统计功能，则设置为 true
 
+在线文档，[请参考这里](https://zq99299.github.io/vuepress-plugin/vuepress-plugin-baidu-tongji-analytics)
+
 ## FAQ
 - 百度统计中心，检查代码安装失败？
 

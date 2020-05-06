@@ -39,4 +39,4 @@ module.exports = {
 }
 ```
 
-更多自定义配置，[请参考这里](https://github.com/zq99299/vuepress-plugins/vuepress-plugin-toolbar/)
+更多自定义配置，[请参考这里](https://zq99299.github.io/vuepress-plugin/vuepress-plugin-toolbar)
