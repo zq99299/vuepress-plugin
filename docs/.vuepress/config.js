@@ -14,7 +14,6 @@ module.exports = {
   // theme: 'vue',
   themeConfig: {
     docsDir: 'docs',
-    // sidebar: 'auto',
     smoothScroll: true, // 页面滚动效果
     sidebarDepth: 3, // 嵌套标题侧边栏提取深度，最大为 2，会提取到 h3
     lastUpdated: '上次更新: ', // string | boolean
@@ -43,6 +42,7 @@ module.exports = {
       { text: '百度统计', link: '/vuepress-plugin-baidu-tongji-analytics/' },
       { text: '侧边工具栏', link: '/vuepress-plugin-toolbar/' },
       { text: '招募志愿者', link: '/volunteers.md' },
+      { text: '导航栏测试页', link: '/page-nav-test.md' },
     ],
     sidebar: {  // 侧边栏配置，需要展示的侧边栏需要在这里配置
       '/vuepress-plugin-baidu-tongji-analytics/': vuepressPluginBaiduTongjiAnalyticsSC(),

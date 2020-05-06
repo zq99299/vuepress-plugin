@@ -7552,8 +7552,9 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   dependencies:
     smoothscroll-polyfill "^0.4.3"
 
-vuepress-plugin-toolbar@./vuepress-plugin-toolbar/:
-  version "0.0.1"
+vuepress-plugin-toolbar@^vuepress-plugin-toolbar:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-toolbar/-/vuepress-plugin-toolbar-0.0.2.tgz#3d53a5e19bb2ed46132172677cf5b9e54ea5824c"
   dependencies:
     animate.css "^3.7.2"
 
