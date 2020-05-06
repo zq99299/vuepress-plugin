@@ -144,55 +144,54 @@ module.exports = {
   }
 }
 ```
--  icon：图标 class 名称
+- icon：图标 class 名称
+
+  -  Type: string
+  -  Default: undefined
+
+- name：图标下显示的文字，建议最长 4 个汉字
+  
+  - Type: string
+  - Default: undefined
+  
+- link：点击这个展示项的时候，是否跳转
 
   - Type: string
-
   - Default: undefined
--  name：图标下显示的文字，建议最长 4 个汉字
-
-  - Type: string
-
-  - Default: undefined
-
--  link：点击这个展示项的时候，是否跳转
-
-  - Type: string
-
-  - Default: undefined
-
--  popover：鼠标移动到图标上，是否显示更详细的信息？
+  
+- popover：鼠标移动到图标上，是否显示更详细的信息？
 
   - Type: Object
-- Default: undefined
+  - Default: undefined
   
 
 下面是 popover 的配置属性说明：
 
--  title：显示这里配置的标题
+- title：显示这里配置的标题
 
   - Type: string
-
   - Default: undefined
--  type：详细信息里面显示的是那种类型的信息？可选配置有 image、text、html
+- type：详细信息里面显示的是那种类型的信息？可选配置有 image、text、html
 
   - Type: string
-- Default: undefined
--  more：是否显示更多按钮
-   -  Type: Object
-   -  Default：undefined
+  - Default: undefined
+- more：是否显示更多按钮
+  
+   - Type: Object
+   - Default：undefined
 
 下面是 more 的配置属性说明
 
 - newWindow：链接调转的时候，是否打开新窗口跳转
+  
   - Type: Boolean
   - Default: false
-
 - link：跳转地址
+
   - Type: String
   - Default: undefined
-
 - name：按钮名称
+
   - Type: Boolean
   - Default: undefined
 
