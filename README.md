@@ -8,5 +8,7 @@
 ：百度统计插件
 - [vuepress-plugin-toolbar](./vuepress-plugin-toolbar/README.md)
 ：页面右侧工具栏插件
+- [vuepress-plugin-tags](./vuepress-plugin-tags/README.md)
+  ：在主标题下方生成标签列表
 
 ## 其他好用的插件分享

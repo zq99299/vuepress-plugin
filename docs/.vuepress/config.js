@@ -1,5 +1,6 @@
 const vuepressPluginBaiduTongjiAnalyticsSC = require('../vuepress-plugin-baidu-tongji-analytics')
 const vuepressPluginToolbarSC = require('../vuepress-plugin-toolbar')
+const vuepressPluginTagsSC = require('../vuepress-plugin-tags')
 
 module.exports = {
   title: 'vuepress-plugin for mrcode',
@@ -39,14 +40,16 @@ module.exports = {
     },
     nav: [
       { text: 'Home', link: '/' },
-      { text: '百度统计', link: '/vuepress-plugin-baidu-tongji-analytics/' },
-      { text: '侧边工具栏', link: '/vuepress-plugin-toolbar/' },
+      { text: '百度统计-插件', link: '/vuepress-plugin-baidu-tongji-analytics/' },
+      { text: '侧边工具栏-插件', link: '/vuepress-plugin-toolbar/' },
+      { text: '标签-插件', link: '/vuepress-plugin-tags/' },
       { text: '招募志愿者', link: '/volunteers.md' },
       { text: '导航栏测试页', link: '/page-nav-test.md' },
     ],
     sidebar: {  // 侧边栏配置，需要展示的侧边栏需要在这里配置
       '/vuepress-plugin-baidu-tongji-analytics/': vuepressPluginBaiduTongjiAnalyticsSC(),
       '/vuepress-plugin-toolbar/': vuepressPluginToolbarSC(),
+      '/vuepress-plugin-tags/': vuepressPluginTagsSC(),
     }
   },
   plugins: [
@@ -147,6 +150,7 @@ module.exports = {
         return moment(timestamp).fromNow()
       }
     }
-    ]
+    ],
+    [require('../../vuepress-plugin-tags'), {}]
   ]
 }
