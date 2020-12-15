@@ -69,7 +69,7 @@ module.exports = {
 module.exports = {
   "plugins": [
     ["vuepress-plugin-tags", {
-      type: 'default', // 标签预定义颜色
+      type: 'default', // 标签类型
       color: '#42b983',  // 标签字体颜色
       border: '1px solid #e2faef', // 标签边框颜色
       backgroundColor: '#f0faf5' // 标签边框颜色
