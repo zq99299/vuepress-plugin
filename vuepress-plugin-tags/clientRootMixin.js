@@ -9,6 +9,7 @@ const defaultConfig = {
   selector: '.page .content__default h1' // 你要将此标签渲染挂载到哪个元素后面？默认是第一个 H1 标签后面
 }
 
+
 export default {
   created () {
     this._mrcodeTags = {
@@ -43,18 +44,19 @@ export default {
       if (!this.$frontmatter.tags) {
         return
       }
+      let config = this._mrcodeTags.config
       let h1 = h1s[0]
       let Tags = Vue.extend(tags)
       let tags1 = new Tags({
         propsData: {
           tags: this.$frontmatter.tags,
-          config: this._mrcodeTags.config
+          config: config
         }
       })
       tags1.$mount()
 
       insterAfter(tags1.$el, h1)
-    }
+    },
   }
 }
 

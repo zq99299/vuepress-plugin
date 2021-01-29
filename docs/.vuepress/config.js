@@ -152,11 +152,24 @@ module.exports = {
     }
     ],
     [require('../../vuepress-plugin-tags'), {
-      type: 'default', // 标签预定义样式
-      color: '#e21142',  // 标签字体颜色
+      type: 'rainbow', // 标签预定义样式
+      color: '#42b983',  // 标签字体颜色
       border: '1px solid #e2faef', // 标签边框颜色
       backgroundColor: '#f0faf5', // 标签背景颜色
-      selector: '.page .content__default h1'
+      selector: '.page .content__default h1',
+      interval: 1,
+      rainbows: [ // 将你要随机的标签样式组在这里定义
+        {
+          color: '#000c07',  // 标签字体颜色
+          border: '1px solid #e2faef', // 标签边框颜色
+          backgroundColor: '#f0faf5', // 标签背景颜色
+        },
+        {
+          color: '#42b983',  // 标签字体颜色
+          border: '1px solid #e2faef', // 标签边框颜色
+          backgroundColor: '#f0faf5', // 标签背景颜色
+        }
+      ]
     }]
   ]
 }
