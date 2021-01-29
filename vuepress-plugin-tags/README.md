@@ -53,10 +53,11 @@ module.exports = {
 module.exports = {
   "plugins": [
     ["vuepress-plugin-tags", {
-      type: 'default', // 标签类型
+      type: 'default', // 标签预定义样式
       color: '#42b983',  // 标签字体颜色
       border: '1px solid #e2faef', // 标签边框颜色
-      backgroundColor: '#f0faf5' // 标签边框颜色
+      backgroundColor: '#f0faf5', // 标签背景颜色
+      selector: '.page .content__default h1' // ^v1.0.1 你要将此标签渲染挂载到哪个元素后面？默认是第一个 H1 标签后面；可以提供 `document.querySelectorAll()` 支持的选择语法，将标签挂载该元素后面
     }]
   ]
 }
@@ -78,3 +79,10 @@ type 有如下的选项：
 ![image-2](https://github.com/zq99299/vuepress-plugin/blob/master/vuepress-plugin-tags/docs/assets/2.png?raw=true)
 
 更多自定义配置，[请参考这里](https://zq99299.github.io/vuepress-plugin/vuepress-plugin-tags)
+
+
+# Change log
+#### v1.0.1
+- 修复：自定义配置样式无效
+- 修复：直接刷新页面导致标签渲染失败
+- 新增：自定义配置提供 selector 选项，可以提供 `document.querySelectorAll()` 支持的选择语法，将标签挂载该元素后面

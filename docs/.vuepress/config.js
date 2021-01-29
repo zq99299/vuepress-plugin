@@ -151,6 +151,12 @@ module.exports = {
       }
     }
     ],
-    [require('../../vuepress-plugin-tags'), {}]
+    [require('../../vuepress-plugin-tags'), {
+      type: 'default', // 标签预定义样式
+      color: '#e21142',  // 标签字体颜色
+      border: '1px solid #e2faef', // 标签边框颜色
+      backgroundColor: '#f0faf5', // 标签背景颜色
+      selector: '.page .content__default h1'
+    }]
   ]
 }

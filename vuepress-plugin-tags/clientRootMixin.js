@@ -2,19 +2,25 @@ import Vue from 'vue'
 import tags from './tags'
 
 const defaultConfig = {
-  type: 'default', // 标签预定义颜色
+  type: 'default', // 标签预定义样式
   color: '#42b983',  // 标签字体颜色
   border: '1px solid #e2faef', // 标签边框颜色
-  backgroundColor: '#f0faf5' // 标签边框颜色
+  backgroundColor: '#f0faf5', // 标签背景颜色
+  selector: '.page .content__default h1' // 你要将此标签渲染挂载到哪个元素后面？默认是第一个 H1 标签后面
 }
 
 export default {
   created () {
     this._mrcodeTags = {
-      config: Object.assign({}, MRCODE_TAGS, defaultConfig)
+      config: Object.assign({}, defaultConfig, MRCODE_TAGS)
     }
   },
   mounted () {
+    this.$nextTick(() => {
+      setTimeout(() => {
+        this._addTagsToPage()
+      }, 300)
+    })
   },
   watch: {
     '$page.path' (val) {
@@ -30,7 +36,7 @@ export default {
   },
   methods: {
     _addTagsToPage () {
-      const h1s = document.querySelectorAll('.page .content__default h1')
+      const h1s = document.querySelectorAll(this._mrcodeTags.config.selector)
       if (h1s.length == 0) {
         return
       }
@@ -39,7 +45,6 @@ export default {
       }
       let h1 = h1s[0]
       let Tags = Vue.extend(tags)
-      console.log(this)
       let tags1 = new Tags({
         propsData: {
           tags: this.$frontmatter.tags,
