@@ -1,1 +1,1 @@
-import './styles/font/index.styl'
+import './styles/fonts/index.styl'
