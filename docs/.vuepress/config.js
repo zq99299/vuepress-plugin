@@ -12,6 +12,10 @@ module.exports = {
   markdown: {
     lineNumbers: true
   },
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
+  ],
   // theme: 'vue',
   themeConfig: {
     docsDir: 'docs',
@@ -53,23 +57,6 @@ module.exports = {
       '/vuepress-plugin-tags/': vuepressPluginTagsSC(),
     }
   },
-  configureWebpack: {
-    module: {
-      rules: [
-        {
-          test: /\.ttf|eot|svg|woff|woff2$/,
-          loader: 'url-loader'
-        }
-      ]
-    }
-  },
-  // configureWebpack: (config, isServer) => {
-  //   if (!isServer) {
-  //     // 修改客户端的 webpack 配置
-  //     // 处理字体文件
-  //     return [{ test: /\.ttf|eot|svg|woff|woff2$/, use: 'url-loader' }]
-  //   }
-  // },
   plugins: [
     [require('../../vuepress-plugin-toolbar'), {
       'pageNav': {
