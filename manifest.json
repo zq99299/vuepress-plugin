@@ -1,0 +1,21 @@
+{
+  "name": "vuepress-plugin",
+  "short_name": "vuepress-plugin",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "为了写笔记的需求，自行开发的一些插件库",
+  "icons": [
+    {
+      "src": "192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "mlogo.svg",
+      "sizes": "48x48 72x72 96x96 128x128 256x256",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
