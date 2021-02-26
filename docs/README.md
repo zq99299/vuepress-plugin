@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: MLOGO200x200.png
+heroImage: mlogo.svg
 actionText: 开始使用 vuepress-plugin-tags
 actionLink: /vuepress-plugin-tags/
 features:
